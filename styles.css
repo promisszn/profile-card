@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --darkCyan: hsl(185, 75%, 39%);
+    --veryDarkBlue: hsl(229, 23%, 23%);
+    --grayishBlue: hsl(227, 10%, 46%);
+    --darkGray: hsl(0, 0%, 59%);
+    --kumbh: 'Kumbh Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+	overflow: hidden;
+}
+
+body{
+    width: 100vw;
+	height: 100vh;
+	position: relative;
+	background-color: var(--darkCyan);
+	overflow: hidden;
+    scrollbar-width: none;
+	font-family: var(--kumbh);
+}
+
+.bg-top {
+	position: absolute;
+	transform: translate(-25%, -65%);
+	top: 0;
+	left: 0;
+}
+
+.bg-bottom {
+	position: absolute;
+	transform: translate(25%, 65%);
+	bottom: 0;
+	right: 0;
+}
+
+.container{
+    width: 300px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 7px;
+	overflow: hidden;
+	background-color: white;
+}
+
+.profile-img{
+    top: 0;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+.profile{
+    position: absolute;
+    left: 50%;
+	top: 50%;
+	transform: translate(-50%, -90%);
+}
+
+.info{
+    margin-top: 4rem;
+    margin-bottom: 1.2rem;
+}
+
+.info h2{
+    text-align: center;
+    font-size: 18px;
+    display: inline;
+    margin-right: 0.5rem;
+    margin-left: 25%;
+    font-weight: 700;
+    color: var(--veryDarkBlue);
+}
+
+.info span{
+    color: var(--darkGray);
+}
+
+.info p{
+    margin-top: 0.5rem;
+    text-align: center;
+    color: var(--grayishBlue);
+    font-size: 15px;
+}
+
+.stats{
+    display: flex;
+    padding: 1.5rem 2.5rem;
+    border-top: 1px solid var(--darkGray);
+    justify-content: space-between;
+}
+
+.stats h2{
+    font-size: 18px;
+    color: var(--veryDarkBlue);
+    text-align: center;
+    padding-bottom: 0.4rem;
+}
+
+.stats p{
+    font-size: 12px;
+    text-align: center;
+    color: var(--darkGray);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 375px) {
+	.bg-top {
+		top: -10%;
+		left: -130%;
+	}
+
+	.bg-bottom {
+		bottom: -10%;
+		right: -130%;
+	}
+
+    html,
+	body {
+		scrollbar-width: none;
+		overflow: hidden;
+	}
+}
